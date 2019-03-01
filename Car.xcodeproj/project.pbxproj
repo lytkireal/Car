@@ -12,6 +12,7 @@
 		D00A390E2228C5D9006845EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00A390C2228C5D9006845EB /* Main.storyboard */; };
 		D00A39102228C5DB006845EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00A390F2228C5DB006845EB /* Assets.xcassets */; };
 		D00A39132228C5DB006845EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00A39112228C5DB006845EB /* LaunchScreen.storyboard */; };
+		D00A391B2228C635006845EB /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A391A2228C635006845EB /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D00A390F2228C5DB006845EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00A39122228C5DB006845EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D00A39142228C5DB006845EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00A391A2228C635006845EB /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,30 @@
 			isa = PBXGroup;
 			children = (
 				D00A39082228C5D9006845EB /* AppDelegate.swift */,
-				D00A390A2228C5D9006845EB /* ViewController.swift */,
+				D00A391D2228D997006845EB /* Scenes */,
+				D00A391C2228D963006845EB /* Assets */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		D00A391C2228D963006845EB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				D00A390C2228C5D9006845EB /* Main.storyboard */,
 				D00A390F2228C5DB006845EB /* Assets.xcassets */,
 				D00A39112228C5DB006845EB /* LaunchScreen.storyboard */,
 				D00A39142228C5DB006845EB /* Info.plist */,
 			);
-			path = Car;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D00A391D2228D997006845EB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D00A390A2228C5D9006845EB /* ViewController.swift */,
+				D00A391A2228C635006845EB /* Car.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			files = (
 				D00A390B2228C5D9006845EB /* ViewController.swift in Sources */,
 				D00A39092228C5D9006845EB /* AppDelegate.swift in Sources */,
+				D00A391B2228C635006845EB /* Car.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3SB85GAN9;
-				INFOPLIST_FILE = Car/Info.plist;
+				INFOPLIST_FILE = Car/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3SB85GAN9;
-				INFOPLIST_FILE = Car/Info.plist;
+				INFOPLIST_FILE = Car/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
