@@ -13,6 +13,7 @@
 		D00A39102228C5DB006845EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00A390F2228C5DB006845EB /* Assets.xcassets */; };
 		D00A39132228C5DB006845EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00A39112228C5DB006845EB /* LaunchScreen.storyboard */; };
 		D00A391B2228C635006845EB /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A391A2228C635006845EB /* Car.swift */; };
+		D093CA0B222907B40094D333 /* RightTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093CA0A222907B40094D333 /* RightTriangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D00A39122228C5DB006845EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D00A39142228C5DB006845EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00A391A2228C635006845EB /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		D093CA0A222907B40094D333 /* RightTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTriangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				D00A39082228C5D9006845EB /* AppDelegate.swift */,
 				D00A391D2228D997006845EB /* Scenes */,
+				D093CA092229079D0094D333 /* Entities */,
 				D00A391C2228D963006845EB /* Assets */,
 			);
 			path = Car;
@@ -81,6 +84,14 @@
 				D00A391A2228C635006845EB /* Car.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D093CA092229079D0094D333 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D093CA0A222907B40094D333 /* RightTriangle.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 			files = (
 				D00A390B2228C5D9006845EB /* ViewController.swift in Sources */,
 				D00A39092228C5D9006845EB /* AppDelegate.swift in Sources */,
+				D093CA0B222907B40094D333 /* RightTriangle.swift in Sources */,
 				D00A391B2228C635006845EB /* Car.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

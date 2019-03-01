@@ -48,33 +48,34 @@ class ViewController: UIViewController {
     // MARK: - Helpers
     
     private func calculateTipTime(tapCoordinate: CGPoint, viewCoordinate: CGPoint) -> Double {
-        let A = tapCoordinate
-        let B = viewCoordinate
-        let C = CGPoint(x: A.x, y: B.y)
+        let rightTriangle = makeRightTriangle(tapCoordinate: tapCoordinate, viewCoordinate: viewCoordinate)
         
-        let BC = C.x - B.x
-        let AC = B.y - A.y
-        let AB = sqrt(BC * BC + AC * AC)
-        
-        let time = Double(AB) * timeForOnePoint
+        let time = Double(rightTriangle.hypotenuse) * timeForOnePoint
         
         return time
     }
     
     private func calculateAngle(tapCoordinate: CGPoint, viewCoordinate: CGPoint) -> CGFloat {
+        let rightTriangle = makeRightTriangle(tapCoordinate: tapCoordinate, viewCoordinate: viewCoordinate)
+        
+        let coefficient = rightTriangle.oppositeLeg > 0 ? 1.0 : -1.0
+        
+        let angle = acos(rightTriangle.adjacentLeg / rightTriangle.hypotenuse) * CGFloat(coefficient)
+        
+        return angle
+    }
+    
+    private func makeRightTriangle(tapCoordinate: CGPoint, viewCoordinate: CGPoint) -> RightTriangle {
         let A = tapCoordinate
         let B = viewCoordinate
         let C = CGPoint(x: A.x, y: B.y)
         
-        let BC = C.x - B.x
-        let AC = B.y - A.y
-        let AB = sqrt(BC * BC + AC * AC)
+        let oppositeLeg = C.x - B.x
+        let adjacentLeg = B.y - A.y
+        let hypotenuse = sqrt(oppositeLeg * oppositeLeg + adjacentLeg * adjacentLeg)
         
-        let coefficient = BC > 0 ? 1.0 : -1.0
-        
-        let angle = acos(AC / AB) * CGFloat(coefficient)
-        
-        return angle
+        return RightTriangle(adjacentLeg: adjacentLeg, oppositeLeg: oppositeLeg, hypotenuse: hypotenuse)
     }
 }
+
 
